@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @layer utilities {
+            .animate-fade {
+                animation: fade 20s infinite;
+            }
+        }
+
+
+
+        * {
+            outline: none,
+        }
+
+        input {
+            outline: none
+        }
+
+        a {
+            outline: none;
+        }
+
+        body {
+            font-family: 'Zain', sans-serif;
+        }
+
+        li {
+            font-size: 20px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            content: "" !important;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+      <section class="overflow-x-hidden grid gap-4">
+
+
+
+
+            <h2 class="text-center text-2xl font-bold md:text-4xl ">
+                اكتشف ايضا
+            </h2>
+
+            <div class="swiper mySwiper best-offers w-full lg:max-w-[1200px]">
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div
+                    class="swiper-button-next best-offers-next bg-white/75 text-black absolute right-0 rounded-lg text-xl flex items-center justify-center">
+                    <i class="fi fi-rr-angle-small-left"></i>
+                </div>
+                <div
+                    class="swiper-button-prev best-offers-prev bg-white/75 text-black absolute right-0 rounded-lg text-xl flex items-center justify-center">
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </div>
+
+            </div>
+        </section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper1 = new Swiper(".best-offers", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: false,
+
+            navigation: {
+                nextEl: ".best-offers-next",
+                prevEl: ".best-offers-prev",
+            },
+            pagination: {
+                el: ".best-offers-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2
+                },
+                640: {
+                    slidesPerView: 2
+                },
+                840: {
+                    slidesPerView: 3
+                },
+
+                1090: {
+                    slidesPerView: 4
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
