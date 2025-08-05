@@ -1,0 +1,176 @@
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+  <body>
+    <section>
+      <div class="flex flex-col sm:flex-row gap-2 justify-between items-center">
+        <button id="open-sort-page" class="bg-[#e52a3b] text-white px-2 py-1 rounded-md w-full sm:w-fit">
+          تصفية المنتجات
+        </button>
+        <div>
+          <span class="text-[#e52a3b] font-bold">عرض:</span>
+          <span class="font-bold">Results 6</span>
+        </div>
+        <div class="max-w-64 relative">
+          <select id="product-category" name="product-category" class="w-full appearance-none p-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-700 text-sm font-medium
+           shadow-md focus:outline-none
+           transition ease-in-out duration-300">
+            <option value="">اختر التصنيف</option>
+            <option value="sofa">متميز</option>
+            <option value="table">الاحدث</option>
+            <option value="chair">الارخض</option>
+            <option value="decor">الاغلى</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+
+
+ <div id="filter-wrapper">
+        <div id="filter-overlay"
+            class="fixed inset-0 bg-transparent bg-opacity-50 z-[1000] transition-opacity duration-300 hidden">
+        </div>
+
+        <div id="sort-modal" class="-translate-x-full fixed top-0 left-0 w-4/5 max-w-sm bg-white h-full z-[1001] shadow-2xl 
+              p-6 flex flex-col transform transition-transform duration-300 ease-in-out">
+
+            <div class="flex items-center justify-between pb-4 border-b">
+                <h2 class="text-2xl font-extrabold text-gray-800 tracking-wide">تصفية المنتجات</h2>
+                <button id="close-filter-btn" class="text-gray-400 hover:text-red-500 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="flex-grow overflow-y-auto py-6 flex flex-col gap-8">
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="font-semibold text-lg text-gray-700">الفئات</h3>
+                    <div class="flex flex-col gap-3">
+
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input type="checkbox" class="peer hidden">
+                            <span class="w-5 h-5 border-2 border-gray-300 rounded-md flex items-center justify-center
+                     peer-checked:bg-red-500 peer-checked:border-red-500 transition-all">
+                                <svg class="w-3 h-3 text-white hidden peer-checked:block" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            <span class="text-gray-800 text-base font-medium">أنتريهات</span>
+                        </label>
+
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input type="checkbox" class="peer hidden">
+                            <span class="w-5 h-5 border-2 border-gray-300 rounded-md flex items-center justify-center
+                     peer-checked:bg-red-500 peer-checked:border-red-500 transition-all">
+                                <svg class="w-3 h-3 text-white hidden peer-checked:block" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            <span class="text-gray-800 text-base font-medium">ركنات</span>
+                        </label>
+
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input type="checkbox" class="peer hidden" checked>
+                            <span class="w-5 h-5 border-2 border-gray-300 rounded-md flex items-center justify-center
+                     peer-checked:bg-red-500 peer-checked:border-red-500 transition-all">
+                                <svg class="w-3 h-3 text-white hidden peer-checked:block" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            <span class="text-gray-800 text-base font-medium">غرف نوم</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4 border-t flex flex-col gap-3">
+                <button
+                    class="w-full bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition-colors">
+                    تطبيق الفلتر
+                </button>
+                <button class="w-full bg-gray-200 text-gray-700 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                    مسح الكل
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+      const overlay = document.getElementById("overlay");
+const translations = ["translate-x-full", "-translate-y-full"];
+
+// Common functions
+function openAnyBar(mainBar, lay, trans) {
+  mainBar.classList.remove(trans);
+  lay.classList.remove("hidden");
+}
+
+function closeAnyBar(mainBar, lay, trans) {
+  mainBar.classList.add(trans);
+  lay.classList.add("hidden");
+}
+
+      const sortSideBarBtn = document.getElementById("open-sort-page");
+const filterOverlay = document.getElementById("filter-overlay");
+const sortModal = document.getElementById("sort-modal");
+const closeSorting = document.getElementById("close-filter-btn");
+
+sortSideBarBtn.addEventListener("click", () => {
+  const isOpen = sortModal.classList.contains("-translate-x-full");
+
+  sortModal.classList.add("-translate-x-full");
+  filterOverlay.classList.add("hidden");
+
+  if (isOpen) {
+    sortModal.classList.remove("-translate-x-full");
+    filterOverlay.classList.remove("hidden");
+  }
+});
+
+closeSorting.addEventListener("click", () => {
+  closeAnyBar(sortModal, filterOverlay, "-translate-x-full");
+});
+
+filterOverlay.addEventListener("click", () => {
+  closeAnyBar(sortModal, filterOverlay, "-translate-x-full");
+});
+    </script>
+  </body>
+</html>

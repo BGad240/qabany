@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        body {
+            font-family: 'Zain', sans-serif;
+        }
+
+    </style>
+</head>
+
+  <body>
+    <div class="w-full lg:w-1/3 flex flex-col gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col gap-4">
+        <h2 class="text-xl font-bold border-b pb-3">المجموع</h2>
+        <div class="flex flex-col gap-3 text-gray-700">
+          <div class="flex justify-between">
+            <span>المجموع</span>
+            <span class="font-bold">LE 44,970</span>
+          </div>
+          <div class="flex justify-between">
+            <span>لقد وفرت:</span>
+            <span class="font-bold text-green-600">LE 17,380</span>
+          </div>
+          <div class="flex justify-between font-semibold">
+            <span>شامل الضرائب والشحن:</span>
+            <span class="font-bold">نعم</span>
+          </div>
+        </div>
+        <label class="flex items-center gap-3 cursor-pointer">
+          <input type="checkbox" class="h-5 w-5 rounded border-gray-300 text-red-600 focus:ring-red-500">
+          <span class="text-sm">أوافق على الشروط و الأحكام</span>
+        </label>
+        <button class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition-colors">
+          إتمام الطلب
+        </button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col gap-4">
+        <h2 class="text-xl font-bold border-b pb-3">تكلفة التوريد والتركيب</h2>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <label class="font-semibold text-sm">البلد</label>
+            <select class="w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500">
+              <option>Egypt</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-semibold text-sm">الرمز البريدي</label>
+            <input type="text" class="w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500">
+          </div>
+          <button class="w-full bg-black text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition-colors">
+            تكلفة التوصيل
+          </button>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col gap-4">
+        <h2 class="text-xl font-bold border-b pb-3">إضافة ملاحظات على طلبك</h2>
+        <textarea rows="4" class="w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+      </div>
+    </div>
+  </body>
+</html>

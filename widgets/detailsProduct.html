@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <!-- swiper -->
+    
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+          body {
+            font-family: 'Zain', sans-serif;
+        }
+    </style>
+</head>
+  <body dir="rtl">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+      <div class="order-first  flex flex-col gap-4">
+        <div class="relative">
+          <img src="./imgs/bestoffers/ركنة2.jpg" alt="غرفة كابرس" class="dts-main-image rounded-lg shadow-md">
+          <div class="absolute top-4 left-4 flex flex-col gap-2">
+            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">خصم</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-5 gap-3">
+          <img src="./imgs/bestoffers/ركنة1.jpg" class="dts-thumb w-full h-20 object-cover border-2 border-red-600 rounded-md cursor-pointer ">
+          <img src="./imgs/bestoffers/ركنة3.jpg" class="dts-thumb w-full h-20 object-cover border-2 border-transparent rounded-md cursor-pointer hover:border-gray-400">
+          <img src="./imgs/bestoffers/ركنة4.jpg" class="dts-thumb w-full h-20 object-cover border-2 border-transparent rounded-md cursor-pointer hover:border-gray-400">
+          <img src="./imgs/bestoffers/ركنة5.jpg" class="dts-thumb w-full h-20 object-cover border-2 border-transparent rounded-md cursor-pointer hover:border-gray-400">
+          <img src="./imgs/bestoffers/ركنة6.jpg" class="dts-thumb w-full h-20 object-cover border-2 border-transparent rounded-md cursor-pointer hover:border-gray-400">
+        </div>
+      </div>
+      <div class="flex flex-col text-right order-last gap-6">
+        <h1 class="text-2xl lg:text-4xl font-black text-gray-900">
+          غرفة كابرس سرير 100 سم دولاب 120 سم
+        </h1>
+        <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+          <span class="text-3xl lg:text-4xl font-bold text-red-600">LE 33,580</span>
+          <span class="text-xl lg:text-2xl text-gray-400 line-through">LE 67,160</span>
+          <span class="text-sm font-semibold text-gray-500">(وفر LE 33,580 | 50% off)</span>
+        </div>
+        <p class="font-semibold text-gray-600">شامل الضريبة.</p>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-1">
+            <span class="font-bold text-xl">QUANTITY:</span>
+            <span class="font-bold ">ب 2 سرير</span>
+          </div>
+          <div class="flex gap-2">
+            <button class="border border-gray-300 text-gray-600 font-bold py-2 px-6 rounded-md hover:bg-gray-100 transition-colors">
+              ب سرير
+            </button>
+            <button class="border-2 border-red-600 bg-white text-gray-900 font-bold py-2 px-6 rounded-md">
+              ب 2 سرير
+            </button>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 underline cursor-pointer hover:text-red-600">
+          تكلفة التوصيل
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center justify-between w-28 bg-gray-100 rounded-lg border border-gray-200 p-1">
+            <button class="text-gray-600 hover:bg-gray-200 rounded-md w-8 h-8 flex items-center justify-center text-2xl font-bold transition-colors">+</button>
+            <span class="text-xl font-bold text-gray-800">1</span>
+            <button class="text-gray-600 hover:bg-gray-200 rounded-md w-8 h-8 flex items-center justify-center text-2xl font-bold transition-colors">-</button>
+          </div>
+          <button class="flex-grow bg-gray-800 text-white text-base font-bold py-3 rounded-lg hover:bg-black transition-colors">
+            أضف إلى السلة
+          </button>
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="terms" class="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500">
+          <label for="terms" class="text-sm text-gray-600">أوافق على الشروط و الأحكام من هنا</label>
+        </div>
+        <button class="w-full bg-red-600 text-white font-bold py-2 rounded-lg hover:bg-red-700 transition-colors text-lg">
+          اشتري الان
+        </button>
+        <div class="flex flex-col gap-3 text-sm">
+          <div class="flex items-center gap-2 text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span><strong class="text-gray-800">32</strong>
+              من عملائنا يشاهدون هذا المنتج</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600">
+            <span>النوع:
+              <strong class="text-gray-800">BEDROOM</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      
+const dtsMainImg = document.querySelector(".dts-main-image");
+const dtsThumbs = document.querySelectorAll(".dts-thumb");
+
+dtsThumbs.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    dtsThumbs.forEach((img) => {
+      img.classList.remove("border-red-600");
+      img.classList.add("border-transparent");
+    });
+
+    thumb.classList.remove("border-transparent");
+    thumb.classList.add("border-red-600");
+
+    dtsMainImg.src = thumb.src;
+  });
+});
+
+    </script>
+  </body>
+</html>
