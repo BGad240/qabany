@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البحث</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body dir="rtl">
+    <!-- ال overlay كان مشترك بين كل ال modals  تقريبا -->
+    <div id="overlay" class="fixed inset-0 bg-black/70 z-40 hidden"></div>
+
+
+
+<!-- search bar -->
+
+  <div id="search-bar"
+        class="w-full bg-white fixed inset-0 h-1/4 z-50  transition-transform duration-300 ease-in-out -translate-y-full">
+        <div>
+
+            <div class="flex flex-col items-center gap-3 px-3 justify-center pt-10">
+                <div class="w-full md:w-2/3 relative">
+                    <button id="close-search" class="self-start text-3xl absolute top-[-20px] left-0">&times;</button>
+
+                    <div class="w-full grid gap-3">
+                        <h1 class="font-bold">
+                            عما تبحث؟
+                        </h1>
+                        <div
+                            class="flex items-center justify-between bg-white border-b py-2 pb-1 px-2 focus-within:border-[2px] focus-within:border-[#e52a3b]  focus-within:rounded-lg border-[#e52a3b]">
+                            <input type="text" placeholder="ابحث في عالمنا..." class="flex-1 outline-none">
+                            <button>
+                                <i class="fi fi-rr-search"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+    const openSearchBar = document.querySelectorAll(".openserchbar");
+    const searchBar = document.getElementById("search-bar");
+    const closeSrchBtn = document.getElementById("close-search");
+
+
+
+    
+    
+openSearchBar.forEach((search) => {
+  search.addEventListener("click", () => {
+    openAnyBar(searchBar, overlay, translations[1]);
+  });
+});
+
+closeSrchBtn.addEventListener("click", () => {
+  closeAnyBar(searchBar, overlay, translations[1]);
+});
+
+overlay.addEventListener("click", () => {
+  closeAnyBar(searchBar, overlay, translations[1]);
+});
+    </script>
+  </body>
+</html>

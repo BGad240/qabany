@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+<style>
+
+            body {
+            font-family: 'Zain', sans-serif;
+        }
+
+</style>
+  </head>
+  <body>
+    <div id="product-modal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-2 sm:p-4 hidden">
+      <div class="bg-white rounded-xl w-full max-w-4xl p-4 sm:p-6 md:p-8 relative shadow-2xl flex flex-col gap-4 sm:gap-6 max-h-[90vh] overflow-y-auto">
+        <button id="close-modal" class="absolute top-3 left-3 text-gray-400 hover:text-gray-800 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          <div class="flex flex-col gap-3 sm:gap-4">
+            <div class="overflow-hidden rounded-lg">
+              <img id="modal-product-image" src="" alt="Product" class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+            <button class="w-full bg-red-600 text-white text-sm sm:text-base font-bold py-2 sm:py-3 rounded-lg hover:bg-red-700 transition-colors">
+              المزيد من التفاصيل
+            </button>
+          </div>
+          <div class="flex flex-col text-right gap-3 sm:gap-4">
+            <h2 id="modal-product-title" class="text-xl sm:text-2xl md:text-3xl font-black text-gray-900">
+              ركنة
+                        مونتانا
+            </h2>
+            <p class="text-xs sm:text-sm font-semibold text-green-600">Available في المخزون</p>
+            <div class="flex items-baseline gap-2 sm:gap-3">
+              <span id="modal-product-price" class="text-xl sm:text-2xl md:text-3xl text-red-600 font-bold">LE
+                            27,990</span>
+              <span id="modal-product-old-price" class="text-base sm:text-lg md:text-xl line-through text-gray-400">LE 34,990</span>
+            </div>
+            <p class="font-bold text-xs sm:text-sm md:text-base">شامل الضريبة.</p>
+            <p id="modal-product-description" class="text-gray-600 text-sm sm:text-base leading-relaxed">
+              الخامات: خشب الزان الطبيعي قماش كتان إسفنج كثافة 30 الألوان: لون القماش: كافيه لون الخشب:
+                        بني...
+            </p>
+            <div class="flex flex-col gap-1 sm:gap-2">
+              <p class="font-bold text-sm sm:text-base">STYLE: يمينية</p>
+              <div class="flex gap-2 flex-wrap">
+                <button class="border-2 border-cyan-700 bg-cyan-50 text-cyan-800 text-sm sm:text-base font-bold py-1 sm:py-2 px-4 sm:px-6 rounded-md">
+                  يمينية
+                </button>
+                <button class="border border-gray-300 text-gray-600 text-sm sm:text-base font-bold py-1 sm:py-2 px-4 sm:px-6 rounded-md hover:bg-gray-100">
+                  يسارية
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 mt-auto flex-wrap">
+              <div class="flex items-center justify-between w-24 sm:w-28 bg-gray-100 rounded-lg border border-gray-200 p-1">
+                <button class="text-gray-600 hover:bg-gray-200 rounded-md w-8 h-8 flex items-center justify-center text-lg sm:text-2xl font-bold transition-colors">+</button>
+                <span class="text-lg sm:text-xl font-bold text-gray-800">1</span>
+                <button class="text-gray-600 hover:bg-gray-200 rounded-md w-8 h-8 flex items-center justify-center text-lg sm:text-2xl font-bold transition-colors">-</button>
+              </div>
+              <button class="flex-grow bg-gray-800 text-white text-sm sm:text-base font-bold py-2 sm:py-3 rounded-lg hover:bg-black transition-colors">
+                أضف إلى السلة
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+
+
+const translations = ["translate-x-full", "-translate-y-full"];
+
+// Common functions
+function openAnyBar(mainBar, lay, trans) {
+  mainBar.classList.remove(trans);
+  lay.classList.remove("hidden");
+}
+
+function closeAnyBar(mainBar, lay, trans) {
+  mainBar.classList.add(trans);
+  lay.classList.add("hidden");
+}
+
+
+
+
+
+const detailsBtns = document.querySelectorAll(".details-preview-btn");
+const modal = document.getElementById("product-modal");
+const modalImg = document.getElementById("modal-product-image");
+const modalTitle = document.getElementById("modal-product-title");
+const modalPrice = document.getElementById("modal-product-price");
+const modalOldPrice = document.getElementById("modal-product-old-price");
+const modalDescription = document.getElementById("modal-product-description");
+const closeModalBtn = document.getElementById("close-modal");
+
+detailsBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const img = btn.getAttribute("data-img");
+    const title = btn.getAttribute("data-title");
+    const price = btn.getAttribute("data-price");
+    const oldPrice = btn.getAttribute("data-oldprice");
+    const description = btn.getAttribute("data-description");
+
+    modalImg.src = img;
+    modalTitle.textContent = title;
+    modalPrice.textContent = price;
+    modalOldPrice.textContent = oldPrice;
+    modalDescription.textContent = description;
+
+    modal.classList.remove("hidden");
+  });
+});
+
+closeModalBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
+
+    </script>
+  </body>
+</html>

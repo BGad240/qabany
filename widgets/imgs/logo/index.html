@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .swiper-pagination {
+            display: none !important;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @layer utilities {
+            .animate-fade {
+                animation: fade 20s infinite;
+            }
+        }
+
+
+
+        * {
+            outline: none,
+        }
+
+        input {
+            outline: none
+        }
+
+        a {
+            outline: none;
+        }
+
+        body {
+            font-family: 'Zain', sans-serif;
+        }
+
+        li {
+            font-size: 20px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            content: "" !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- heaedr for moblie -->
+    <header class="py-2 px-[10px] w-full md:px-[90px] flex flex-col gap-10 sticky top-0 z-[49] bg-white">
+        <div class="flex justify-between items-center py-2">
+            <div class="flex items-center gap-3 lg:hidden">
+                <span id="opensidebar">
+                    <i class="fi fi-rr-menu-burger"></i>
+                </span>
+                <span id="openserchbar" class="openserchbar">
+                    <i class=" fi fi-rr-search"></i>
+                </span>
+            </div>
+            <div class="w-full flex justify-center">
+                <img src="./imgs/logo/logo3.avif" alt="" class="w-[100px] sm:w-[190px]">
+            </div>
+            <div class="flex items-center gap-3">
+                <span id="openserchbar" class="openserchbar hidden lg:block">
+                    <i class="fi fi-rr-search"></i>
+                </span>
+                <div class="log-state-btn relative ">
+                    <i class="fi fi-rr-user"></i>
+
+                    <div
+                        class="log-state-cntr absolute left-[-40px] sm:left-[-50px] shadow-2xl bg-white  w-[200px] p-4 sm:w-[300px] text-center flex flex-col gap-1 z-[50] hidden translate-y-[100px] transition-all duration-300 ease-in-out">
+                        <div>
+                            <button class="bg-[#e52a3b] text-white w-full py-1.5 rounded-md">
+                                <a href="./login.html">سجل الدخول</a>
+                            </button>
+                        </div>
+                        <div>
+                            <p>مستخدم جديد؟ <a href="./login.html" class="underline">سجل الان</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <span id="open-cart-btn">
+                    <i class="fi fi-rr-basket-shopping-simple"></i>
+                </span>
+            </div>
+        </div>
+        <nav class="hidden lg:block relative">
+            <ul class="flex flex-wrap justify-center gap-5">
+                <li class="font-bold text-lg">
+                    <a href="" class="relative">OUTLET
+                        <span class=" 
+                        after:content-['']
+                        after:absolute
+                        after:w-0
+                        after:w-0
+                        after:left-0
+                        after:border-[6px]
+                        after:border-transparent
+                        after:border-b-[#f48920]
+                        after:top-[11px]
+                        after:right-[0px]
+                        after:rotate-45
+                        bg-[#f48920]
+                        text-sm
+                        text-white
+                        px-1
+                        rounded-[3px]
+                        absolute
+                        top-[-100%]
+                        translate-x-[100%]
+                        ">
+                            جديد
+                        </span>
+                    </a>
+                </li>
+                <li class="font-bold text-lg">
+                    <a href="" class="relative">خصومات
+                        <span class=" 
+                        after:content-['']
+                        after:absolute
+                        after:w-0
+                        after:w-0
+                        after:left-0
+                        after:border-[6px]
+                        after:border-transparent
+                        after:border-b-[#f00]
+                        after:top-[11px]
+                        after:right-[0px]
+                        after:rotate-45
+                        bg-[#f00]
+                        text-sm
+                        text-white
+                        px-1
+                        rounded-[3px]
+                        absolute
+                        top-[-100%]
+                        translate-x-[100%]
+                        ">
+                            50%
+                        </span>
+                    </a>
+                </li>
+                <li class=" font-bold  text-lg group">
+                    <div class=" duration-300 ease-in-out">
+                        <div class="flex items-center gap-1 hover:text-[#e52a3b]">
+                            <a href="">غرف معيشة</a>
+                            <span class="">
+                                <i class="fi fi-rr-angle-small-down"></i>
+                            </span>
+                        </div>
+
+                        <ul class="hidden group-hover:grid -translate-x-[4%] -translate-y-2 absolute left-0 top-full w-screen bg-white shadow-lg z-[100]  
+         grid grid-cols-5 gap-5 py-6 px-8 transition-all duration-300 ease-in-out">
+
+                            <li>
+                                <a href="#" class="flex flex-col gap-3">
+                                    <!-- ✅ تحجيم الصورة -->
+                                    <img src="./imgs/header/chair1.jpg" alt="انتريهات"
+                                        class="rounded-lg w-full h-32 sm:h-36 lg:h-40 object-cover" />
+                                    <p class="font-semibold hover:text-[#e52a3b] transition">انتريهات</p>
+                                </a>
+
+                                <!-- ✅ الروابط الفرعية -->
+                                <ul class="mt-2 space-y-1">
+                                    <li class="flex items-center hover:text-[#e52a3b] group">
+                                        <span
+                                            class="block w-0 h-[2px] bg-[#e52a3b] group-hover:w-[6px] transition-all duration-150"></span>
+                                        <p class="transition-all duration-150 ml-1">انتريه كامل</p>
+                                    </li>
+
+                                    <li class="flex items-center hover:text-[#e52a3b] group">
+                                        <span
+                                            class="block w-0 h-[2px] bg-[#e52a3b] group-hover:w-[6px] transition-all duration-150"></span>
+                                        <p class="transition-all duration-150 ml-1">كنبة انتريه</p>
+                                    </li>
+
+                                    <li class="flex items-center hover:text-[#e52a3b] group">
+                                        <span
+                                            class="block w-0 h-[2px] bg-[#e52a3b] group-hover:w-[6px] transition-all duration-150"></span>
+                                        <p class="transition-all duration-150 ml-1">كراسي انتريه</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+                <li class="font-bold">
+                    <div>
+                        <div class="flex items-center gap-1 hover:text-[#e52a3b]">
+                            <a href="">غرف النوم</a>
+                            <span class="">
+                                <i class="fi fi-rr-angle-small-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="font-bold">
+                    <div>
+                        <div class="flex items-center gap-1 hover:text-[#e52a3b]">
+                            <a href="">غرف السفرة</a>
+                            <span class="">
+                                <i class="fi fi-rr-angle-small-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="font-bold">
+                    <div>
+                        <div class="flex items-center gap-1 hover:text-[#e52a3b]">
+                            <a href="">مراتب ومفروشات</a>
+                            <span class="">
+                                <i class="fi fi-rr-angle-small-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="font-bold">
+                    <div>
+                        <div class="flex items-center gap-1 hover:text-[#e52a3b]">
+                            <a href="">ترابيزات وحافظات احذية</a>
+                            <span class="">
+                                <i class="fi fi-rr-angle-small-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="font-bold">
+                    <div>
+                        <div class="flex items-center gap-1 hover:text-[#e52a3b]">
+                            <a href="">اثاث الحدائق</a>
+                            <span class="">
+                                <i class="fi fi-rr-angle-small-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <div class="flex justify-center w-full gap-5">
+                    <li class="font-bold">
+                        <div>
+                            <div class="flex items-center gap-1 hover:text-[#e52a3b]">
+                                <a href="">اضاءة</a>
+                                <span class="">
+                                    <i class="fi fi-rr-angle-small-down"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="font-bold hover:text-[#e52a3b]">
+                        <a href="#">سجاد</a>
+                    </li>
+                    <li class="font-bold hover:text-[#e52a3b]">
+                        <a href=""></a>
+                    </li>
+                    <li class="font-bold hover:text-[#e52a3b]">
+                        <a href="">مطابخ</a>
+                    </li>
+                    <li class="font-bold hover:text-[#e52a3b]">
+                        <a href="">ستائر</a>
+                    </li>
+                    <li class="font-bold hover:text-[#e52a3b]">
+                        <a href="">اكسسوارات</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto w-[90%] md:w-[85%] grid gap-10">
+
+
+
+        <div class="hero relative w-full">
+            <img src="./imgs/hero/hero2.webp" class="w-full object-cover  animate-fade [animation-delay:0s]">
+
+
+            <img src="./imgs/hero/hero3.webp"
+                class="absolute inset-0 w-full object-cover  animate-fade [animation-delay:5s]">
+
+
+            <img src="./imgs/hero/hero4.webp"
+                class="absolute inset-0 w-full object-cover opacity-0 animate-fade [animation-delay:10s]">
+
+
+            <img src="./imgs/hero/hero5.webp"
+                class="absolute inset-0 w-full object-cover opacity-0 animate-fade [animation-delay:15s]">
+        </div>
+
+
+
+        <section class="overflow-x-hidden grid gap-4">
+
+
+
+
+            <h2 class="text-center text-2xl font-bold md:text-4xl ">
+                اقوى العروض
+            </h2>
+
+            <div class="swiper mySwiper best-offers w-full lg:max-w-[1200px]">
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة2.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة3.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة5.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+
+                                </a>
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة6.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div
+                    class="swiper-button-next best-offers-next bg-white/75 text-black absolute right-0 rounded-lg text-xl flex items-center justify-center">
+                    <i class="fi fi-rr-angle-small-left"></i>
+                </div>
+                <div class="swiper-button-prev best-offers-prev bg-white/75 text-black">
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="reklainer flex flex-col">
+            <img src="./imgs/hero/hero2.webp" alt="" class="w-full h-auto">
+        </section>
+
+
+        <section class="overflow-x-hidden grid gap-4">
+            <div class="swiper mySwiper best-offers w-full lg:max-w-[1200px]">
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة2.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة3.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة5.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة6.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+
+                                </a>
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+
+                            " />
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div
+                    class="swiper-button-next best-offers-next bg-white/75 text-black absolute right-0 rounded-lg text-xl flex items-center justify-center">
+                    <i class="fi fi-rr-angle-small-left"></i>
+                </div>
+                <div class="swiper-button-prev best-offers-prev bg-white/75 text-black">
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="flex items-center">
+            <div>
+                <img src="./imgs/سراير.jpg" alt="">
+            </div>
+            <div>
+                <img src="./imgs/دواليب.jpg" alt="">
+            </div>
+        </section>
+
+        <section>
+            <img src="./imgs/hero/ريكلاينر_حقيقي.webp" alt="">
+        </section>
+
+
+
+        <section class="overflow-x-hidden grid gap-4">
+            <div class="swiper mySwiper best-offers w-full lg:max-w-[1200px]">
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+
+                                    <img src="./imgs/bestoffers/ركنة2.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+
+                                </a>
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة3.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+
+                                    <img src="./imgs/bestoffers/ركنة6.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة5.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+
+                                </a>
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة6.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div
+                    class="swiper-button-next best-offers-next bg-white/75 text-black absolute right-0 rounded-lg text-xl flex items-center justify-center">
+                    <i class="fi fi-rr-angle-small-left"></i>
+                </div>
+                <div class="swiper-button-prev best-offers-prev bg-white/75 text-black">
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section>
+            <img src="./imgs/hero/سراير_يباشا.webp" alt="">
+        </section>
+
+
+
+
+
+
+        <section class="overflow-x-hidden grid gap-4">
+            <div class="swiper mySwiper best-offers w-full lg:max-w-[1200px]">
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة2.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة3.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة5.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة6.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div class="relative
+        before:content-['10%']
+        before:absolute
+        before:top-2
+        before:left-2
+        before:bg-[#e52a3b]
+        before:rounded-xl
+        before:text-white
+        before:px-2
+        before:z-50 
+        ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out main rounded-lg" />
+                                    <img src="./imgs/bestoffers/ركنة3.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="absolute top-full right-[40%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md  "
+                                    data-img="./imgs/bestoffers/ركنة1.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة.">
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class=" overflow-hidden relative">
+                            <div class="relative
+                            before:content-['10%']
+                            before:absolute
+                            before:top-2
+                            before:left-2
+                            before:bg-[#e52a3b]
+                            before:rounded-xl
+                            before:text-white
+                            before:px-2
+                            ">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة6.jpg" class="w-full h-[180px] object-cover rounded-lg  
+                            
+                            " />
+                                </a>
+                            </div>
+
+                            <div class="">
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute top-full right-[30%] w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+                                <span
+                                    class="bg-black/90 text-white flex items-center justify-center absolute right-[50%] top-full  w-[35px] h-[35px] rounded-md group-hover:top-[70%] transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center font-bold text-slate-800 ">
+                            <a href="" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div
+                    class="swiper-button-next best-offers-next bg-white/75 text-black absolute right-0 rounded-lg text-xl flex items-center justify-center">
+                    <i class="fi fi-rr-angle-small-left"></i>
+                </div>
+                <div class="swiper-button-prev best-offers-prev bg-white/75 text-black">
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <footer class="px-3 md:px-10 py-4 bg-gray-50 w-full pb-[40px] md:pb-4 mt-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="flex flex-col lg:flex-row gap-4 lg:gap-20">
+                <div class="flex md:flex-col lg:flex-row">
+                    <div class="flex flex-col gap-10">
+                        <img src="./imgs/logo/5a_ik_3amaly_e64aeaf9-6a12-4507-bfc2-372feff1ae88.webp" alt=""
+                            class="max-w-[100px]">
+                        <div class="social-links font-bold flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm">
+                                    <i class="fi fi-rr-phone-flip"></i>
+                                </span>
+                                <p>الخط الساخن: <span>2131287342</span></p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>
+                                    <i class="fi fi-rr-envelope"></i>
+                                </span>
+                                <p>bgadbgadbgadbgad@hotmail.com</p>
+                            </div>
+                            <div></div>
+                            <div class="flex gap-3 items-center pt-10">
+                                <div>
+                                    <img src="./imgs/social/App_s.avif" alt="" class="max-w-[120px]">
+                                </div>
+                                <div>
+                                    <img src="./imgs/social/Android.avif" alt="" class="max-w-[120px]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="font-bold text-lg hidden md:block">
+                    <h3>روابط سريعة</h3>
+                    <p><a href="">الرئيسية</a></p>
+                    <p><a href="">عن قباني</a></p>
+                    <p><a href="">فروعنا</a></p>
+                    <p><a href="">مركز المساعدة</a></p>
+                </div>
+                <div class="border-b pb-2 font-bold md:hidden">
+                    <div class="ftr-sm-btn flex justify-between items-center cursor-pointer">
+                        <h1>روابط سريعة</h1>
+                        <span>
+                            <i class="ftr-sm-icon fi fi-rr-angle-small-down"></i>
+                        </span>
+                    </div>
+
+                    <div
+                        class="footer-submenu overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out bg-gray-50 px-2">
+                        <p><a href="">الرئيسية</a></p>
+                        <p><a href="">عن قباني</a></p>
+                        <p><a href="">فروعنا</a></p>
+                        <p><a href="">مركز المساعدة</a></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="font-bold text-lg hidden md:block">
+                    <h3>الشروط والاحكام</h3>
+                    <p><a href="">سياسة الاسترجاع والاستبدال</a></p>
+                    <p><a href="">سياسة الخصوصية</a></p>
+                    <p><a href="">شروط الخدمة</a></p>
+                    <p><a href="">سياسة الشحن</a></p>
+                    <p><a href="">طرق التقسيط</a></p>
+                    <p><a href="">طرق الدفع</a></p>
+                    <p><a href="">الضمان</a></p>
+                </div>
+                <div class="border-b pb-2 md:hidden font-bold">
+                    <div class="ftr-sm-btn flex justify-between items-center cursor-pointer">
+                        <h1>اللوائح والسياسات</h1>
+                        <span>
+                            <i class="ftr-sm-icon fi fi-rr-angle-small-down"></i>
+                        </span>
+                    </div>
+
+                    <div
+                        class="footer-submenu overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out bg-gray-50 px-2">
+                        <p><a href="">الرئيسية</a></p>
+                        <p><a href="">عن قباني</a></p>
+                        <p><a href="">فروعنا</a></p>
+                        <p><a href="">مركز المساعدة</a></p>
+                    </div>
+                </div>
+
+                <div class="font-bold flex flex-col gap-2">
+                    <h3>النشرة الاخبارية</h3>
+                    <div class="">
+                        <p>ادخل بريدك الالكتروني لتلقي العروض اليومية</p>
+                        <div class="flex flex-col gap-2">
+                            <input type="text" placeholder="ادخل البريد الالكتروني"
+                                class="py-2 px-2 max-w-[350px] bg-white border rounded-md">
+                            <button
+                                class="bg-black text-white font-bold h-[35px] w-[60px] flex items-center justify-center rounded-md">اشترك</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-10 font-bold">
+            <p>جميع الحقوق محفوظة لـ قباني للأثاث ©</p>
+            <p>رقم التسجيل الضريبي 569-961-525</p>
+            <p>Copyright © 2025 Kabbani Furniture. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- fixed-bottom-bar -->
+
+    <section class="grid grid-cols-5 fixed bottom-0 left-0 w-full gap-0 md:hidden bg-white z-40 py-2">
+        <div class="flex items-center justify-center">
+            <a href="./index.html">
+                <span class=" flex items-center justify-center">
+                    <i class="fi fi-rr-home text-2xl"></i>
+                </span>
+                <p>الرئيسية</p>
+            </a>
+        </div>
+        <div class="flex items-center justify-center w-full">
+            <a href="./sections.html">
+                <span class=" flex items-center justify-center">
+                    <i class="fi fi-rr-apps text-2xl"></i>
+                </span>
+                <p>الاقسام</p>
+            </a>
+        </div>
+        <div class="flex items-center justify-center">
+            <a href="./salesof.html">
+                <span class=" flex items-center justify-center">
+                    <i class="fi fi-rr-badge-percent text-2xl"></i>
+                </span>
+                <p>الخصومات</p>
+            </a>
+        </div>
+        <div class="flex items-center justify-center">
+            <a href="./login.html">
+                <span class=" flex items-center justify-center">
+                    <i class="fi fi-rr-user text-2xl"></i>
+                </span>
+                <p>حسابي</p>
+            </a>
+        </div>
+        <div class="flex items-center justify-center">
+            <a href="./cart.html">
+                <span class=" flex items-center justify-center">
+                    <i class="fi fi-rr-shopping-cart text-2xl"></i>
+                </span>
+                <p>العربة</p>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- sidevar for nav links -->
+
+    <!--  translate-x-full -->
+
+    <div id="overlay" class="fixed inset-0 bg-black/70 z-40 hidden"></div>
+
+    <div id="sidebar"
+        class="fixed top-0 right-0 bg-white w-4/5 sm:w-2/3 md:w-1/3 h-screen z-50 transition-transform duration-300 ease-in-out translate-x-full text-sm shadow-xl overflow-y-auto">
+
+
+        <div class="flex justify-start items-center gap-2 p-2 border-b bg-[#f2f2f2]">
+            <button id="closeSidebar" class="text-red-500 hover:text-red-700 transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <h2 class="text-base font-semibold">القائمة</h2>
+        </div>
+
+
+        <ul class="text-gray-800">
+            <li class="border-b py-2 px-3">
+                <a href="./outlet.html" class="block hover:text-red-600 transition">outlet</a>
+            </li>
+            <li class="border-b py-2 px-3">
+                <a href="./salesof.html" class="block hover:text-red-600 transition">خصومات</a>
+            </li>
+
+
+            <li class="border-b">
+                <div class="flex items-center justify-between py-2 px-3">
+                    <a href="" class="hover:text-red-600 transition">غرف معيشة</a>
+                    <button class="sb-toggle-btn">
+                        <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                    </button>
+                </div>
+
+                <ul
+                    class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-gray-50 px-3 text-xs">
+                    <li class="py-1">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="hover:text-red-600 transition">انتريهات</a>
+                            <button class="sb-toggle-btn">
+                                <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                            </button>
+                        </div>
+
+                        <ul class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out pl-3">
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">انتريه كامل</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنبة انتريه</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كراسي انتريه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">ركنات</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنب سرير</a></li>
+                </ul>
+            </li>
+            <li class="border-b">
+                <div class="flex items-center justify-between py-2 px-3">
+                    <a href="" class="hover:text-red-600 transition">غرف النوم</a>
+                    <button class="sb-toggle-btn">
+                        <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                    </button>
+                </div>
+
+                <ul
+                    class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-gray-50 px-3 text-xs">
+                    <li class="py-1">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="hover:text-red-600 transition">انتريهات</a>
+                            <button class="sb-toggle-btn">
+                                <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                            </button>
+                        </div>
+
+                        <ul
+                            class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out pl-3 text-xs">
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">انتريه كامل</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنبة انتريه</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كراسي انتريه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">ركنات</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنب سرير</a></li>
+                </ul>
+            </li>
+
+            <li class="border-b">
+                <div class="flex items-center justify-between py-2 px-3">
+                    <a href="" class="hover:text-red-600 transition">غرف السفرة</a>
+                    <button class="sb-toggle-btn">
+                        <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                    </button>
+                </div>
+
+                <ul
+                    class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-gray-50 px-3 text-xs">
+                    <li class="py-1">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="hover:text-red-600 transition">انتريهات</a>
+                            <button class="sb-toggle-btn">
+                                <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                            </button>
+                        </div>
+                        <ul
+                            class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out pl-3 text-xs">
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">انتريه كامل</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنبة انتريه</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كراسي انتريه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">ركنات</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنب سرير</a></li>
+                </ul>
+            </li>
+
+
+
+
+            <li class="border-b">
+                <div class="flex items-center justify-between py-2 px-3">
+                    <a href="" class="hover:text-red-600 transition">مراتب ومفروشات</a>
+                    <button class="sb-toggle-btn">
+                        <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                    </button>
+                </div>
+
+                <ul
+                    class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-gray-50 px-3 text-xs">
+                    <li class="py-1">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="hover:text-red-600 transition">انتريهات</a>
+                            <button class="sb-toggle-btn">
+                                <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                            </button>
+                        </div>
+                        <ul
+                            class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out pl-3 text-xs">
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">انتريه كامل</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنبة انتريه</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كراسي انتريه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">ركنات</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنب سرير</a></li>
+                </ul>
+            </li>
+
+
+
+            <li class="border-b">
+                <div class="flex items-center justify-between py-2 px-3">
+                    <a href="" class="hover:text-red-600 transition">ترابيزات ومفروشات واحذية</a>
+                    <button class="sb-toggle-btn">
+                        <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                    </button>
+                </div>
+
+                <ul
+                    class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-gray-50 px-3 text-xs">
+                    <li class="py-1">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="hover:text-red-600 transition">انتريهات</a>
+                            <button class="sb-toggle-btn">
+                                <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                            </button>
+                        </div>
+
+                        <ul
+                            class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out pl-3 text-xs">
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">انتريه كامل</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنبة انتريه</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كراسي انتريه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">ركنات</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنب سرير</a></li>
+                </ul>
+            </li>
+
+
+
+
+
+            <li class="border-b">
+                <div class="flex items-center justify-between py-2 px-3">
+                    <a href="" class="hover:text-red-600 transition">اثاث الحدائق</a>
+                    <button class="sb-toggle-btn">
+                        <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                    </button>
+                </div>
+
+                <ul
+                    class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-gray-50 px-3 text-xs">
+                    <li class="py-1">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="hover:text-red-600 transition">انتريهات</a>
+                            <button class="sb-toggle-btn">
+                                <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                            </button>
+                        </div>
+
+                        <ul class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out pl-3">
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">انتريه كامل</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنبة انتريه</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كراسي انتريه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">ركنات</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنب سرير</a></li>
+                </ul>
+            </li>
+
+
+
+
+
+
+            <li class="border-b">
+                <div class="flex items-center justify-between py-2 px-3">
+                    <a href="" class="hover:text-red-600 transition">اضاء</a>
+                    <button class="sb-toggle-btn">
+                        <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                    </button>
+                </div>
+
+                <ul
+                    class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-gray-50 px-3 text-xs">
+                    <li class="py-1">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="hover:text-red-600 transition">انتريهات</a>
+                            <button class="sb-toggle-btn">
+                                <i class="submenu-icon fi fi-rr-plus text-xs"></i>
+                            </button>
+                        </div>
+
+                        <ul class="submenu overflow-hidden max-h-0 transition-all duration-500 ease-in-out pl-3">
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">انتريه كامل</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنبة انتريه</a></li>
+                            <li class="py-1"><a href="#" class="hover:text-red-600 transition">كراسي انتريه</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">ركنات</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-red-600 transition">كنب سرير</a></li>
+                </ul>
+            </li>
+
+
+
+
+
+            <li class="border-b py-2 px-3">
+                <a href="" class="block hover:text-red-600 transition">سجاد</a>
+            </li>
+            <li class="border-b py-2 px-3">
+                <a href="" class="block hover:text-red-600 transition">مطابخ</a>
+            </li>
+
+
+
+            <li class="border-b py-2 px-3">
+                <a href="" class="block hover:text-red-600 transition">ستائر</a>
+            </li>
+            <li class="border-b py-2 px-3">
+                <a href="" class="block hover:text-red-600 transition">اكسسوار</a>
+            </li>
+
+
+
+            <li class=" py-2 px-3">
+                <a href="./login.html" class="block hover:text-red-600 transition">تسجيل الدخول</a>
+            </li>
+
+
+        </ul>
+    </div>
+
+
+
+
+    <div id="search-bar"
+        class="w-full bg-white fixed inset-0 h-1/4 z-50  transition-transform duration-300 ease-in-out -translate-y-full">
+        <div>
+
+            <div class="flex flex-col items-center gap-3 px-3 justify-center pt-10">
+                <div class="w-full md:w-2/3 relative">
+                    <button id="close-search" class="self-start text-3xl absolute top-[-20px] left-0">&times;</button>
+
+                    <div class="w-full grid gap-3">
+                        <h1 class="font-bold">
+                            عما تبحث؟
+                        </h1>
+                        <div
+                            class="flex items-center justify-between bg-white border-b py-2 pb-1 px-2 focus-within:border-[2px] focus-within:border-[#e52a3b]  focus-within:rounded-lg border-[#e52a3b]">
+                            <input type="text" placeholder="ابحث في عالمنا..." class="flex-1 outline-none">
+                            <button>
+                                <i class="fi fi-rr-search"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- product modal -->
+
+
+
+
+
+    <!-- cart -->
+
+    <div id="cart-wrapper" class="hidden">
+        <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-40"></div>
+
+        <div id="cart-panel" class="fixed top-0 left-0 h-full w-[90%] sm:w-4/5 md:max-w-md bg-white shadow-xl z-50
+              p-4 sm:p-6 flex flex-col 
+              transform -translate-x-full transition-transform duration-300 ease-in-out gap-4">
+
+
+            <div class="flex justify-between items-center border-b pb-3">
+                <h2 class="text-lg sm:text-xl font-bold">السلة</h2>
+                <button id="close-cart-btn" class="text-gray-600 hover:text-black">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+            <div id="empty-cart" class="flex-grow flex flex-col items-center justify-center gap-4 text-gray-500 hidden">
+                <div class="flex-grow flex items-center justify-center text-center">
+                    <div class="text-gray-500 flex flex-col items-center gap-4">
+                        <i class="fi fi-rr-shopping-cart text-5xl"></i>
+                        <p>لا توجد منتجات في سلة التسوق.</p>
+                    </div>
+                </div>
+
+                <div class="border-t w-full pt-4">
+                    <button class="w-full bg-red-600 text-white py-3 rounded-lg font-bold">
+                        متابعة التجول
+                    </button>
+                </div>
+            </div>
+
+
+            <div id="filled-cart" class="flex-grow flex flex-col gap-4 overflow-y-auto">
+
+                <div class="flex items-center gap-3 border rounded-lg p-3">
+
+                    <div class="w-20 h-20 bg-gray-100 flex items-center justify-center rounded-lg overflow-hidden">
+                        <img src="./imgs/bestoffers/ركنة2.jpg" alt="صورة المنتج" class="object-cover">
+                    </div>
+
+
+                    <div class="flex-1 flex flex-col gap-1">
+                        <h3 class="text-sm font-bold">كنبة مودرن 3 مقاعد</h3>
+                        <p class="text-gray-600 text-sm">LE 3,990</p>
+
+
+                        <div class="flex items-center gap-2">
+                            <button class="w-6 h-6 flex items-center justify-center bg-gray-200 rounded">-</button>
+                            <span class="text-sm font-medium">2</span>
+                            <button class="w-6 h-6 flex items-center justify-center bg-gray-200 rounded">+</button>
+                        </div>
+                    </div>
+
+
+                    <button class="text-gray-400 hover:text-red-500">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+
+            <div id="cart-actions" class="border-t pt-4 flex flex-col gap-3">
+
+                <div class="flex justify-between text-sm sm:text-base font-semibold">
+                    <span>المجموع:</span>
+                    <span class="text-red-600">LE 7,980</span>
+                </div>
+
+
+                <p class="text-xs sm:text-sm text-gray-600">شامل الضرائب والشحن</p>
+
+
+                <label class="flex items-center gap-2 text-xs sm:text-sm">
+                    <input type="checkbox" class="w-4 h-4 border-gray-300">
+                    <span>أوافق على الشروط و الأحكام من هنا</span>
+                </label>
+
+
+                <div class="flex flex-col gap-2">
+                    <button
+                        class="w-full bg-pink-200 text-gray-700 py-2 sm:py-3 rounded-lg font-bold text-sm sm:text-base">
+                        إتمام الطلب
+                    </button>
+                    <button class="w-full bg-red-600 text-white py-2 sm:py-3 rounded-lg font-bold text-sm sm:text-base">
+                        متابعة التجول
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- product modal -->
+
+    <div id="product-modal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-2 sm:p-4 hidden">
+        <div
+            class="bg-white rounded-xl w-full max-w-4xl p-4 sm:p-6 md:p-8 relative shadow-2xl flex flex-col gap-4 sm:gap-6 max-h-[90vh] overflow-y-auto">
+
+            <button id="close-modal" class="absolute top-3 left-3 text-gray-400 hover:text-gray-800 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+
+
+                <div class="flex flex-col gap-3 sm:gap-4">
+                    <div class="overflow-hidden rounded-lg">
+                        <img id="modal-product-image" src="" alt="Product"
+                            class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <button
+                        class="w-full bg-red-600 text-white text-sm sm:text-base font-bold py-2 sm:py-3 rounded-lg hover:bg-red-700 transition-colors">
+                        المزيد من التفاصيل
+                    </button>
+                </div>
+
+
+                <div class="flex flex-col text-right gap-3 sm:gap-4">
+                    <h2 id="modal-product-title" class="text-xl sm:text-2xl md:text-3xl font-black text-gray-900">
+                        ركنة
+                        مونتانا</h2>
+
+                    <p class="text-xs sm:text-sm font-semibold text-green-600">Available في المخزون</p>
+
+                    <div class="flex items-baseline gap-2 sm:gap-3">
+                        <span id="modal-product-price" class="text-xl sm:text-2xl md:text-3xl text-red-600 font-bold">LE
+                            27,990</span>
+                        <span id="modal-product-old-price"
+                            class="text-base sm:text-lg md:text-xl line-through text-gray-400">LE 34,990</span>
+                    </div>
+
+                    <p class="font-bold text-xs sm:text-sm md:text-base">شامل الضريبة.</p>
+
+                    <p id="modal-product-description" class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        الخامات: خشب الزان الطبيعي قماش كتان إسفنج كثافة 30 الألوان: لون القماش: كافيه لون الخشب:
+                        بني...
+                    </p>
+
+                    <div class="flex flex-col gap-1 sm:gap-2">
+                        <p class="font-bold text-sm sm:text-base">STYLE: يمينية</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <button
+                                class="border-2 border-cyan-700 bg-cyan-50 text-cyan-800 text-sm sm:text-base font-bold py-1 sm:py-2 px-4 sm:px-6 rounded-md">
+                                يمينية
+                            </button>
+                            <button
+                                class="border border-gray-300 text-gray-600 text-sm sm:text-base font-bold py-1 sm:py-2 px-4 sm:px-6 rounded-md hover:bg-gray-100">
+                                يسارية
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="flex items-center gap-3 sm:gap-4 mt-auto flex-wrap">
+                        <div
+                            class="flex items-center justify-between w-24 sm:w-28 bg-gray-100 rounded-lg border border-gray-200 p-1">
+                            <button
+                                class="text-gray-600 hover:bg-gray-200 rounded-md w-8 h-8 flex items-center justify-center text-lg sm:text-2xl font-bold transition-colors">+</button>
+                            <span class="text-lg sm:text-xl font-bold text-gray-800">1</span>
+                            <button
+                                class="text-gray-600 hover:bg-gray-200 rounded-md w-8 h-8 flex items-center justify-center text-lg sm:text-2xl font-bold transition-colors">-</button>
+                        </div>
+                        <button
+                            class="flex-grow bg-gray-800 text-white text-sm sm:text-base font-bold py-2 sm:py-3 rounded-lg hover:bg-black transition-colors">
+                            أضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- log state -->
+
+    <div class="log-overlay fixed inset-0 w-screen h-screen hidden"></div>
+
+
+
+    <script src="./script.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        const swiper1 = new Swiper(".best-offers", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: false,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: ".best-offers-next",
+                prevEl: ".best-offers-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2
+                },
+                640: {
+                    slidesPerView: 2
+                },
+                840: {
+                    slidesPerView: 3
+                },
+
+                1090: {
+                    slidesPerView: 4
+                }
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

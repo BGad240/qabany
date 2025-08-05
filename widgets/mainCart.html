@@ -1,0 +1,165 @@
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+         body {
+            font-family: 'Zain', sans-serif;
+        }
+
+        @layer utilities {
+            @keyframes rotate-pause {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                15% {
+                    transform: rotate(12deg);
+                }
+
+
+                35% {
+                    transform: rotate(0deg);
+                }
+
+
+                55% {
+                    transform: rotate(-12deg);
+                }
+
+
+                75% {
+                    transform: rotate(0deg);
+                }
+
+
+                100% {
+                    transform: rotate(0deg);
+                }
+
+
+            }
+
+            .animate-rotate-pause {
+                animation: rotate-pause 1.5s ease-in-out infinite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الdiv  الاول للعرض بس, محتاج يتشال -->
+    <div class="grid grid-cols-4">
+    <div class="swiper-slide grid gap-3 relative overflow-hidden group">
+                        <div class="overflow-hidden relative">
+                            <div
+                                class="hover-toggle-image relative before:content-['10%'] before:absolute before:top-2 before:left-2 before:bg-[#e52a3b] before:rounded-xl before:text-white before:px-2">
+                                <a href="./productdetails.html">
+                                    <img src="./imgs/bestoffers/ركنة4.jpg"
+                                        class="w-full h-[180px] object-cover group-hover:opacity-0 duration-150 transition-all ease-in-out" />
+                                    <img src="./imgs/bestoffers/ركنة1.jpg"
+                                        class="w-full h-[180px] object-cover absolute inset-0 opacity-0 group-hover:opacity-100  duration-150 transition-all ease-in-out" />
+                                </a>
+                                <img src="./imgs/عروض/عرض1.webp" alt=""
+                                    class="absolute top-2 right-2 h-[20px] md:h-[30px] animate-rotate-pause ">
+                            </div>
+
+                            <div
+                                class="absolute top-full translate-x-[50%] right-[50%] group-hover:top-[70%] flex gap-2 transition-all duration-300">
+                                <span
+                                    class="details-preview-btn bg-black/90 text-white flex items-center justify-center   w-[35px] h-[35px] rounded-md transition-all duration-300"
+                                    data-img="./imgs/bestoffers/ركنة4.jpg" data-title="ركنة ماكس" data-price="LE 1,999"
+                                    data-oldprice="LE 2,2342"
+                                    data-description="ركنة مريحة جدًا بخامة ممتازة ومناسبة لغرف المعيشة."
+                                    data-img-hover="./imgs/عروض/عرض1.webp">
+
+
+                                    <i class="fi fi-rr-search-heart"></i>
+                                </span>
+
+
+                                <span
+                                    class="quicklook-btn bg-black/90 text-white flex items-center justify-center  w-[35px] h-[35px] rounded-md  transition-all duration-300">
+                                    <i class="fi fi-rr-shopping-cart"></i>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center font-bold text-slate-800">
+                            <a href="#" class="hover:text-[#e52a3b] transition-all text-lg">ركنة ماكس</a>
+                            <div class="flex justify-center gap-2">
+                                <span class="line-through">LE 2,2342</span>
+                                <span class="text-[#e52a3b]">LE 1,999</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="quicklook-overlay absolute inset-0 bg-white/90 w-full h-full z-[40] -translate-y-full transition-all duration-300">
+                            <button
+                                class="close-quicklook-btn absolute top-3 right-3 text-gray-600 hover:text-black transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                            <div class="flex flex-col items-center gap-4 h-full justify-center">
+                                <h1 class="text-xl font-bold">
+                                    سرير فيوليت
+                                </h1>
+                                <div class="flex gap-2 items-center">
+                                    <span class="line-through text-lg font-bold"> LE 23,390</span>
+                                    <span class="text-[#e52a3b] text-2xl font-extrabold">LE 20,000</span>
+                                </div>
+                                <div class="text-center flex flex-col gap-1">
+                                    <p class="font-bold text-lg"><span class="text-[#e52a3b]">STYLE:</span> سرير</p>
+                                    <div class="flex gap-2 text-lg font-bold">
+                                        <button
+                                            class="bg-white w-[70px] py-.5 text-black border-2 border-[#e52a3b]">سرير</button>
+                                        <button class="bg-white w-[70px] py-.5 text-black border-2 border-[#e52a3b]">2
+                                            سرير</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button
+                                        class="bg-[#e52a3b] text-white px-2 py-1.5 rounded-md hover:bg-black  transition-colors font-bold">
+                                        اضافة الى السلة
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+    </div>
+    </div>
+    <script>
+const quicklookOverlay = document.querySelectorAll(".quicklook-overlay");
+const quicklookBtn = document.querySelectorAll(".quicklook-btn");
+const quicklookCloseBtn = document.querySelectorAll(".close-quicklook-btn");
+
+quicklookBtn.forEach((btn, index) => {
+  const currentOverlay = quicklookOverlay[index];
+  const currentClose = quicklookCloseBtn[index];
+
+  currentOverlay.classList.add("-translate-y-full");
+
+  btn.addEventListener("click", () => {
+    currentOverlay.classList.remove("-translate-y-full");
+  });
+
+  currentClose.addEventListener("click", () => {
+    currentOverlay.classList.add("-translate-y-full");
+  });
+});
+    </script>
+</body>
+</html>

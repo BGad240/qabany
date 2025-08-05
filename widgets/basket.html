@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>    
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Zain', sans-serif;
+        }
+
+    </style>
+    </head>
+    <body dir="rtl">
+      
+        
+    <div id="cart-wrapper" class="hidden">
+        <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-40"></div>
+
+        <div id="cart-panel" class="fixed top-0 left-0 h-full w-[90%] sm:w-4/5 md:max-w-md bg-white shadow-xl z-50
+              p-4 sm:p-6 flex flex-col 
+              transform -translate-x-full transition-transform duration-300 ease-in-out gap-4">
+
+
+            <div class="flex justify-between items-center border-b pb-3">
+                <h2 class="text-lg sm:text-xl font-bold">السلة</h2>
+                <button id="close-cart-btn" class="text-gray-600 hover:text-black">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+            <div id="empty-cart" class="flex-grow flex flex-col items-center justify-center gap-4 text-gray-500 hidden">
+                <div class="flex-grow flex items-center justify-center text-center">
+                    <div class="text-gray-500 flex flex-col items-center gap-4">
+                        <i class="fi fi-rr-shopping-cart text-5xl"></i>
+                        <p>لا توجد منتجات في سلة التسوق.</p>
+                    </div>
+                </div>
+
+                <div class="border-t w-full pt-4">
+                    <button class="w-full bg-red-600 text-white py-3 rounded-lg font-bold">
+                        متابعة التجول
+                    </button>
+                </div>
+            </div>
+
+
+            <div id="filled-cart" class="flex-grow flex flex-col gap-4 overflow-y-auto">
+
+                <div class="flex items-center gap-3 border rounded-lg p-3">
+
+                    <div class="w-20 h-20 bg-gray-100 flex items-center justify-center rounded-lg overflow-hidden">
+                        <img src="./imgs/bestoffers/ركنة2.jpg" alt="صورة المنتج" class="object-cover">
+                    </div>
+
+
+                    <div class="flex-1 flex flex-col gap-1">
+                        <h3 class="text-sm font-bold">كنبة مودرن 3 مقاعد</h3>
+                        <p class="text-gray-600 text-sm">LE 3,990</p>
+
+
+                        <div class="flex items-center gap-2">
+                            <button class="w-6 h-6 flex items-center justify-center bg-gray-200 rounded">-</button>
+                            <span class="text-sm font-medium">2</span>
+                            <button class="w-6 h-6 flex items-center justify-center bg-gray-200 rounded">+</button>
+                        </div>
+                    </div>
+
+
+                    <button class="text-gray-400 hover:text-red-500">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+
+            <div id="cart-actions" class="border-t pt-4 flex flex-col gap-3">
+
+                <div class="flex justify-between text-sm sm:text-base font-semibold">
+                    <span>المجموع:</span>
+                    <span class="text-red-600">LE 7,980</span>
+                </div>
+
+
+                <p class="text-xs sm:text-sm text-gray-600">شامل الضرائب والشحن</p>
+
+
+                <label class="flex items-center gap-2 text-xs sm:text-sm">
+                    <input type="checkbox" class="w-4 h-4 border-gray-300">
+                    <span>أوافق على الشروط و الأحكام من هنا</span>
+                </label>
+
+
+                <div class="flex flex-col gap-2">
+                    <button
+                        class="w-full bg-pink-200 text-gray-700 py-2 sm:py-3 rounded-lg font-bold text-sm sm:text-base">
+                        إتمام الطلب
+                    </button>
+                    <button class="w-full bg-red-600 text-white py-2 sm:py-3 rounded-lg font-bold text-sm sm:text-base">
+                        <a href="">
+                            الذهاب الى السلة
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    
+const openCartBtn = document.getElementById("open-cart-btn");
+const closeCartBtn = document.getElementById("close-cart-btn");
+const cartWrapper = document.getElementById("cart-wrapper");
+const cartPanel = document.getElementById("cart-panel");
+const cartOverlay = document.getElementById("cart-overlay");
+
+const openCart = () => {
+  cartWrapper.classList.remove("hidden");
+  setTimeout(() => {
+    cartPanel.classList.remove("-translate-x-full");
+  }, 10);
+};
+
+const closeCart = () => {
+  cartPanel.classList.add("-translate-x-full");
+  setTimeout(() => {
+    cartWrapper.classList.add("hidden");
+  }, 300);
+};
+
+openCartBtn?.addEventListener("click", openCart);
+closeCartBtn?.addEventListener("click", closeCart);
+cartOverlay?.addEventListener("click", closeCart);
+
+
+</script>
+    </body>
+</html>

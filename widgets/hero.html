@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Flat Icons -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        
+        
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @layer utilities {
+            .animate-fade {
+                animation: fade 20s infinite;
+            }
+        }
+
+
+
+        * {
+            outline: none,
+        }
+
+        input {
+            outline: none
+        }
+
+        a {
+            outline: none;
+        }
+
+        body {
+            font-family: 'Zain', sans-serif;
+        }
+</style>
+  </head>
+  <body>
+    <div class="hero relative w-full">
+      <img src="./imgs/hero/hero2.webp" class="w-full object-cover  animate-fade [animation-delay:0s]">
+      <img src="./imgs/hero/hero3.webp" class="absolute inset-0 w-full object-cover  animate-fade [animation-delay:5s]">
+      <img src="./imgs/hero/hero4.webp" class="absolute inset-0 w-full object-cover opacity-0 animate-fade [animation-delay:10s]">
+      <img src="./imgs/hero/hero5.webp" class="absolute inset-0 w-full object-cover opacity-0 animate-fade [animation-delay:15s]">
+    </div>
+  </body>
+</html>
